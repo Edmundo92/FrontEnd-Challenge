@@ -1,0 +1,106 @@
+button {
+    border-width: 0;
+    outline-width: 0;
+}
+
+.buttons-container {
+    display: flex;
+    button {
+        margin-right: 15px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        height: 40px;
+        padding: 0 15px;
+        font-size: 13px;
+        cursor: pointer;
+        span {
+            margin-left: 10px;
+            font-weight: bolder;
+        }
+        svg {
+            height: 18px !important;
+        }
+    }
+    .btn-add {
+        color: white;
+        background-color: $color-siner;
+    }
+    .btn-filter {
+        background-color: white;
+    }
+}
+
+.button {
+    min-width: 48px;
+    height: 48px;
+    padding: 4px 16px;
+    border-radius: 8px;
+    box-shadow: none;
+    text-transform: none;
+    cursor: pointer;
+    position: relative;
+    margin: 4px 0;
+}
+
+.btn {
+    width: 270px;
+    -webkit-transition: width 0.4s cubic-bezier(0.9, 0.1, 0.1, 0.9), background 0.5s cubic-bezier(0.9, 0.1, 0.1, 0.9), border 0.6s cubic-bezier(0.9, 0.1, 0.1, 0.9);
+    transition: width 0.4s cubic-bezier(0.9, 0.1, 0.1, 0.9), background 0.5s cubic-bezier(0.9, 0.1, 0.1, 0.9), border 0.6s cubic-bezier(0.9, 0.1, 0.1, 0.9);
+}
+
+.btn-primary {
+    background-color: $color-siner;
+    border: solid 1px $color-siner;
+    color: white;
+}
+
+.btn-inline {
+    background-color: #fff;
+    border: solid 1px $color-siner;
+    color: $color-siner;
+}
+
+.btn-active {
+    font-size: 0;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    border: 2px solid white !important;
+    border-left-color: transparent !important;
+    animation: rotate 1.4s ease 0.5s infinite;
+    background-color: transparent !important;
+    -webkit-transition: all 0.4s cubic-bezier(0.9, 0.1, 0.1, 0.9);
+    transition: all 0.4s cubic-bezier(0.9, 0.1, 0.1, 0.9);
+    width: 10rem;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(360deg);
+    }
+}
+
+.sucess {
+    position: relative;
+    background-color: white !important;
+    animation: bounce .3s ease-in;
+    &::before {
+        content: "";
+        position: absolute;
+        background: url() no-repeat;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 31px;
+        height: 31px;
+        line-height: 31px;
+        top: 8px;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(0.9);
+    }
+}

@@ -1,0 +1,94 @@
+.table-container {
+    table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0px 4px;
+        font-family: font_light;
+    }
+    .plate-w {
+        width: 94px
+    }
+    .city-w {
+        width: 125px;
+    }
+    table tbody tr td {
+        background-color: rgb(255, 255, 255);
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 16px;
+    }
+    tbody tr td:first-child,
+    thead tr th:first-child {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        font-weight: 900;
+    }
+    tbody tr td:last-child,
+    thead tr th:last-child {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+    thead {
+        background-color: $color-siner-sec;
+        color: white;
+        font-weight: bolder;
+    }
+    th,
+    td {
+        padding: 10px 15px;
+        font-size: 14px;
+        vertical-align: middle;
+        text-align: left;
+    }
+    td:last-child {
+        position: relative;
+        overflow: hidden;
+    }
+    .filter-icon {
+        height: 24px;
+        width: 24px;
+    }
+    .actions-btn {
+        display: flex;
+        .remove-icon {}
+        .edit-icon {
+            margin-right: 10px;
+        }
+        .remove-icon,
+        .edit-icon {
+            height: 15px;
+            width: 15px;
+            padding: 10px;
+            border-radius: 100%;
+            color: black;
+            transition: all .4s ease-in-out;
+            cursor: pointer;
+        }
+        .remove-icon:hover,
+        .edit-icon:hover {
+            background: $color-siner-sec;
+        }
+    }
+}
+
+.no-register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px;
+    font-family: font_light;
+    .icon-no-register {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        color: $color-siner
+    }
+    p {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 700px) {
+    .table-container {
+        width: 700px;
+        margin: 0 auto;
+    }
+}

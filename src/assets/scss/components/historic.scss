@@ -1,0 +1,48 @@
+.historic-wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+    .historic {
+        width: auto;
+        margin: 0 auto;
+        background-color: red;
+        padding: 50px 0;
+        max-height: 305px;
+        overflow-y: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .close-btn {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            font-size: 19px;
+            font-family: font_bold;
+        }
+    }
+    .historic-container {
+        height: auto;
+        margin: 5px auto;
+        display: flex;
+        justify-content: center;
+        input,
+        select {
+            height: 45px;
+            border-width: 0;
+            padding: 0 5px;
+            margin: 0 10px;
+        }
+        button {
+            width: 30px;
+            background-color: $color-siner;
+            font-size: 24px;
+            color: $color-white;
+        }
+    }
+}

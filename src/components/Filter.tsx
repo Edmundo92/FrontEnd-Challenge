@@ -5,9 +5,7 @@ import Input from "./Input";
 import { FiMapPin, FiTriangle, FiTruck } from "react-icons/fi";
 
 import { Formik } from "formik";
-import * as Yup from "yup";
 
-import { useTransition, animated } from "react-spring";
 import { Transition } from "react-spring/renderprops";
 import api from "../api";
 import FieldGroup from "./FieldGroup";
@@ -24,12 +22,6 @@ const Filter = ({ filter, setFilter, setData }: any) => {
       content: filter,
     }));
   }, [filter]);
-
-  const transitions = useTransition(toggle, null, {
-    from: { transform: "translate3d(0,-200px,0)" },
-    enter: { transform: "translate3d(0,100px,0)" },
-    leave: { transform: "translate3d(0,-40px,0)" },
-  });
 
   const RegisterVehicleForm = {
     id: "",

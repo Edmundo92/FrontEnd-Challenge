@@ -8,7 +8,7 @@ const Root = () => {
   return (
     <Layout>
       <Switch>
-        <Route exact path="/veiculos" component={ListingVehicle} />
+        <Route exact path="/" component={ListingVehicle} />
         <Route path="/veiculo/:id" component={RegisterVehicle} />
         <Route path="/veiculo" component={RegisterVehicle} />
       </Switch>

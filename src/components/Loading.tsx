@@ -6,6 +6,6 @@ export const Loading = (props: any) => (
     className="load-container"
     style={props.isLoading ? { display: "block" } : { display: "none" }}
   >
-    <img src={LOADING} />
+    <img src={LOADING} alt="" />
   </div>
 );

@@ -1,14 +1,8 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Input from "../../components/Input";
 import Select from "../../components/Select";
 import FieldGroup from "../../components/FieldGroup";
-import {
-  FiMapPin,
-  FiAtSign,
-  FiTriangle,
-  FiTruck,
-  FiClock,
-} from "react-icons/fi";
+import { FiMapPin, FiAtSign, FiTriangle, FiTruck } from "react-icons/fi";
 
 import { uuid } from "uuidv4";
 
@@ -19,16 +13,12 @@ import { useParams, useHistory } from "react-router-dom";
 import api from "../../api";
 import { sucess } from "../../helpers/alert";
 import { Loading } from "../../components/Loading";
-import Historic from "../../components/Historic";
 import { Veiculo } from "../../models";
 
 const RegisterVehicle = () => {
   const { id } = useParams();
   const history = useHistory();
-  const [historicList, setHistoricList] = useState<any>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [btnClassAnimation, setBtnClassAnimation] = useState("btn");
-  const [hideOrShowHistoric, setHideOrShowHistoric] = useState<boolean>(false);
   const [oneVehicle, setOneVehicle] = useState<Veiculo>({
     id: "",
     km_atual: 0,
@@ -41,7 +31,7 @@ const RegisterVehicle = () => {
     if (id) {
       findVehicle(id);
     }
-  }, []);
+  }, [id]);
 
   const RegisterVehicleSchema = Yup.object().shape({
     email_proprietario: Yup.string()
@@ -92,7 +82,7 @@ const RegisterVehicle = () => {
   }
 
   function messageAndRedirect(message: string) {
-    sucess(message, () => history.push("/veiculos"));
+    sucess(message, () => history.push("/"));
   }
 
   return (
@@ -167,7 +157,7 @@ const RegisterVehicle = () => {
               </div>
 
               <div className="button-container">
-                <button type="submit" className={btnClassAnimation}>
+                <button type="submit" className="btn">
                   Salvar
                 </button>
               </div>
